@@ -1,0 +1,6 @@
+[pm25]
+pm25_uri=http://www.pm25.in/api/querys/all_cities.json
+token=5j1znBVAsnSf5xQyNQyq
+
+[storage]
+file_pattern=/data/pm25/pm25_all_cities_%s.json
