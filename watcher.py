@@ -8,6 +8,8 @@ import ConfigParser
 def download():
     """
     Download data from PM25.in
+    
+    This is a simple program for get PM25 data
     """
     cf = ConfigParser.ConfigParser()
     cf.read('config.ini')
