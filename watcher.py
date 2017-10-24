@@ -1,6 +1,8 @@
 # -*- coding:utf8 -*-
 
 import urllib2
+import sys
+import os
 import json
 import time
 import ConfigParser
@@ -11,8 +13,11 @@ def download():
     
     This is a simple program for get PM25 data
     """
+    base_path = sys.path[0]
+
     cf = ConfigParser.ConfigParser()
-    cf.read('config.ini')
+    cf.read(os.path.join(base_path, 'config.ini'))
+
     pm25_uri = cf.get('pm25', 'pm25_uri')
     token = cf.get('pm25', 'token')
     data_file = cf.get('storage', 'file_pattern')
